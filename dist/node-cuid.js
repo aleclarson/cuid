@@ -92,6 +92,10 @@
     return pid + hostId;
   };
 
+  api.test = function isCuid(str) {
+    return (typeof str === 'string') && /^c[^\s-]{8,}$/.test(str);
+  };
+
 
   // don't change anything from here down.
   if (app.register) {
